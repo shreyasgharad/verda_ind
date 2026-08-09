@@ -1,0 +1,14 @@
+{
+  "name": "verda_ind",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Daily news carousel — free RSS fetch, Playwright render, Instagram publish.",
+  "scripts": {
+    "fetch": "node news-fetch-rss.js > today.json",
+    "render": "node render-slides.js today.json out",
+    "publish": "node post-instagram.js out today.json"
+  },
+  "dependencies": {
+    "playwright": "^1.47.0"
+  }
+}

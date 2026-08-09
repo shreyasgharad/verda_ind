@@ -1,0 +1,104 @@
+name: daily-carousel
+
+# 06:00 IST every day = 00:30 UTC. Also runnable by hand from the Actions tab.
+on:
+  schedule:
+    - cron: "30 0 * * *"
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: "Publish to Instagram? Uncheck for a dry run (fetch + render + preview only)."
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "daily-carousel"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright's Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Fetch today's stories (free RSS, no key)
+        run: node news-fetch-rss.js > today.json
+
+      - name: Show what was picked
+        run: cat today.json
+
+      - name: Render 9 slides at 1080x1080
+        run: node render-slides.js today.json out
+
+      - name: Build the Pages site (slides need a public URL for Instagram to fetch)
+        run: |
+          mkdir -p site/slides
+          cp out/*.png site/slides/
+          cp today.json site/
+
+      - name: Keep today.json + PNGs as a build artifact (for review/debugging)
+        uses: actions/upload-artifact@v4
+        with:
+          name: carousel-${{ github.run_id }}
+          path: |
+            today.json
+            out/*.png
+          retention-days: 14
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+
+  publish:
+    needs: deploy
+    if: ${{ github.event.inputs.publish != 'false' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Download today's fetch + render output
+        uses: actions/download-artifact@v4
+        with:
+          name: carousel-${{ github.run_id }}
+
+      - name: Wait for the Pages deploy to actually be servable
+        run: sleep 45
+
+      - name: Post the carousel to Instagram
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IMAGE_BASE: ${{ needs.deploy.outputs.page_url }}slides
+        run: node post-instagram.js out today.json
