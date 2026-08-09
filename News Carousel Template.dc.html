@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&amp;family=Yellowtail&amp;display=swap" rel="stylesheet">
+<style>
+body { margin:0; background:#8f8b82; }
+a { color:#E23B26; text-decoration:none; }
+a:hover { color:#111; }
+</style>
+</helmet>
+
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#F2EFE9"></rect><rect x="0" y="70" width="100" height="30" fill="#DCD7CC"></rect><text x="50" y="46" font-family="Archivo,sans-serif" font-size="26" font-weight="900" fill="#E23B26" text-anchor="middle">7</text></svg></template>
+
+<div style="display:flex;flex-direction:column;align-items:center;gap:40px;padding:40px 0;font-family:Archivo,sans-serif">
+
+<section data-document-role="page" data-label="01 Cover" data-screen-label="01" style="position:relative;width:1080px;height:1080px;flex:none;overflow:hidden;background:radial-gradient(92% 62% at 50% 104%,rgba(226,59,38,.30) 0%,rgba(226,59,38,.07) 46%,rgba(226,59,38,0) 72%),radial-gradient(70% 50% at 6% -4%,rgba(255,206,142,.55) 0%,rgba(255,206,142,0) 62%),linear-gradient(168deg,#FFFCF6 0%,#F4F0E7 46%,#E6DBC5 100%);color:#111">
+  <div style="position:absolute;top:30px;left:0;right:0;display:flex;justify-content:center;gap:9px">
+    <span style="width:7px;height:7px;border-radius:50%;background:#111"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span>
+  </div>
+  <div style="position:absolute;top:56px;left:56px;right:56px;display:flex;justify-content:space-between;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase">
+    <span>{{ issueLabel }}</span><span>{{ handle }}</span><span>Weekly Edition</span>
+  </div>
+
+  <div style="position:absolute;top:118px;left:0;right:0;text-align:center">
+    <div style="font-family: Yellowtail,cursive; font-size: 78px; line-height: .9; transform: rotate(-1.5deg); transform-origin: left center; text-align: left; padding: 0 32px">this week in</div><div style="font-size: 150px; font-weight: 900; line-height: .82; letter-spacing: -.05em; margin-top: -6px; width: 1072px; height: 124px">THE WORLD</div><div style="font-size: 36px; font-weight: 600; letter-spacing: .02em; margin-top: 14px">7 stories that moved the planet</div>
+  </div>
+
+  <div style="position:absolute;top:396px;left:56px;right:56px;bottom:112px;display:flex;flex-direction:column;justify-content:center">
+    <div style="display:flex;gap:18px;align-items:baseline;padding:11px 0;border-bottom:1px solid #D6D0C3"><span style="font-size:16px;font-weight:800;color:#E23B26;width:32px">01</span><span style="font-size:26px;font-weight:600;line-height:1.18;text-wrap:pretty">{{ h1 }}</span></div>
+    <div style="display:flex;gap:18px;align-items:baseline;padding:11px 0;border-bottom:1px solid #D6D0C3"><span style="font-size:16px;font-weight:800;color:#E23B26;width:32px">02</span><span style="font-size:26px;font-weight:600;line-height:1.18;text-wrap:pretty">{{ h2 }}</span></div>
+    <div style="display:flex;gap:18px;align-items:baseline;padding:11px 0;border-bottom:1px solid #D6D0C3"><span style="font-size:16px;font-weight:800;color:#E23B26;width:32px">03</span><span style="font-size:26px;font-weight:600;line-height:1.18;text-wrap:pretty">{{ h3 }}</span></div>
+    <div style="display:flex;gap:18px;align-items:baseline;padding:11px 0;border-bottom:1px solid #D6D0C3"><span style="font-size:16px;font-weight:800;color:#E23B26;width:32px">04</span><span style="font-size:26px;font-weight:600;line-height:1.18;text-wrap:pretty">{{ h4 }}</span></div>
+    <div style="display:flex;gap:18px;align-items:baseline;padding:11px 0;border-bottom:1px solid #D6D0C3"><span style="font-size:16px;font-weight:800;color:#E23B26;width:32px">05</span><span style="font-size:26px;font-weight:600;line-height:1.18;text-wrap:pretty">{{ h5 }}</span></div>
+    <div style="display:flex;gap:18px;align-items:baseline;padding:11px 0;border-bottom:1px solid #D6D0C3"><span style="font-size:16px;font-weight:800;color:#E23B26;width:32px">06</span><span style="font-size:26px;font-weight:600;line-height:1.18;text-wrap:pretty">{{ h6 }}</span></div>
+    <div style="display:flex;gap:18px;align-items:baseline;padding:11px 0;border-bottom:1px solid #D6D0C3"><span style="font-size:16px;font-weight:800;color:#E23B26;width:32px">07</span><span style="font-size:26px;font-weight:600;line-height:1.18;text-wrap:pretty">{{ h7 }}</span></div>
+  </div>
+
+  <div style="position:absolute;left:56px;right:56px;bottom:34px;display:flex;align-items:center;justify-content:space-between;font-size:15px;font-weight:800;letter-spacing:.12em;color:#111">
+    <span>SWIPE</span>
+    <span style="flex:1;height:1px;background:#111;margin:0 20px"></span>
+    <span>NEXT ›</span>
+  </div>
+</section>
+
+<section data-document-role="page" data-label="02 Story 01" data-screen-label="02" style="position:relative;width:1080px;height:1080px;flex:none;overflow:hidden;background:radial-gradient(95% 64% at 98% 102%,rgba(226,59,38,.22) 0%,rgba(226,59,38,0) 62%),radial-gradient(62% 46% at -2% -2%,rgba(255,209,150,.48) 0%,rgba(255,209,150,0) 64%),linear-gradient(162deg,#FFFCF6 0%,#F3EFE8 48%,#E8DFCD 100%);color:#111">
+  <div style="position:absolute;top:30px;left:0;right:0;display:flex;justify-content:center;gap:9px"><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#111"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span></div>
+  <div style="position:absolute;top:56px;left:56px;right:56px;display:flex;justify-content:space-between;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase"><span>{{ issueLabel }}</span><span>{{ handle }}</span><span>Story 01</span></div>
+  <div style="position:absolute;top:132px;left:56px;right:56px">
+    <div style="display:flex;align-items:baseline;gap:18px">
+      <span style="font-size:120px;font-weight:900;line-height:.8;letter-spacing:-.05em;color:#E23B26">01</span>
+      <span style="font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:8px 14px;border:1.5px solid #111;border-radius:999px">{{ c1 }}</span>
+    </div>
+    <div style="font-family:Yellowtail,cursive;font-size:56px;line-height:.9;margin-top:12px;transform:rotate(-2deg)">the story</div>
+    <div style="font-size:82px;font-weight:900;line-height:.92;letter-spacing:-.04em;margin-top:2px;text-wrap:balance">{{ h1 }}</div>
+    <div style="font-size:25px;font-weight:400;line-height:1.35;margin-top:20px;max-width:880px;text-wrap:pretty">{{ s1 }}</div>
+  </div>
+  <div style="position:absolute;left:0;right:0;bottom:0;height:400px;background-image:linear-gradient(180deg,rgba(20,18,14,0) 45%,rgba(20,18,14,.28) 100%),url({{ img1 }}),linear-gradient(138deg,#F0EADC 0%,#DBD4C3 52%,#C6BEAA 100%);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:#9A9384;font-size:13px;font-weight:700;letter-spacing:.22em">{{ imgLabel1 }}</div>
+  <div style="position:absolute;left:56px;right:56px;bottom:112px;font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#6E6759">{{ src1 }}</div>
+  <div style="position:absolute;left:56px;right:56px;bottom:44px">
+    <div style="display:flex;align-items:center;gap:16px;font-size:15px;font-weight:800;letter-spacing:.12em"><span>‹ BACK</span><span style="flex:1;height:1px;background:#111"></span><span>NEXT ›</span></div>
+    <div style="display:flex;justify-content:space-between;margin:10px 60px 0;font-size:13px;font-weight:700;letter-spacing:.1em;color:#B0A896"><span style="color:#E23B26">01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span></div>
+  </div>
+</section>
+
+<section data-document-role="page" data-label="03 Story 02" data-screen-label="03" style="position:relative;width:1080px;height:1080px;flex:none;overflow:hidden;background:radial-gradient(95% 64% at 2% 102%,rgba(226,59,38,.22) 0%,rgba(226,59,38,0) 62%),radial-gradient(62% 46% at 102% -2%,rgba(255,209,150,.48) 0%,rgba(255,209,150,0) 64%),linear-gradient(196deg,#FFFCF6 0%,#F3EFE8 48%,#E8DFCD 100%);color:#111">
+  <div style="position:absolute;top:30px;left:0;right:0;display:flex;justify-content:center;gap:9px;z-index:2"><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#111"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span></div>
+  <div style="position:absolute;left:0;right:0;top:0;height:430px;background-image:linear-gradient(180deg,rgba(20,18,14,0) 45%,rgba(20,18,14,.28) 100%),url({{ img2 }}),linear-gradient(138deg,#F0EADC 0%,#DBD4C3 52%,#C6BEAA 100%);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:#9A9384;font-size:13px;font-weight:700;letter-spacing:.22em">{{ imgLabel2 }}</div>
+  <div style="position:absolute;top:56px;left:56px;right:56px;display:flex;justify-content:space-between;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;z-index:2"><span>{{ issueLabel }}</span><span>{{ handle }}</span><span>Story 02</span></div>
+  <div style="position:absolute;top:492px;left:56px;right:56px">
+    <div style="display:flex;align-items:baseline;gap:18px">
+      <span style="font-size:120px;font-weight:900;line-height:.8;letter-spacing:-.05em;color:#E23B26">02</span>
+      <span style="font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:8px 14px;border:1.5px solid #111;border-radius:999px">{{ c2 }}</span>
+    </div>
+    <div style="font-size:82px;font-weight:900;line-height:.92;letter-spacing:-.04em;margin-top:22px;text-wrap:balance">{{ h2 }}</div>
+    <div style="font-size:25px;font-weight:400;line-height:1.35;margin-top:20px;max-width:880px;text-wrap:pretty">{{ s2 }}</div>
+  </div>
+  <div style="position:absolute;left:56px;right:56px;bottom:112px;font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#6E6759">{{ src2 }}</div>
+  <div style="position:absolute;left:56px;right:56px;bottom:44px">
+    <div style="display:flex;align-items:center;gap:16px;font-size:15px;font-weight:800;letter-spacing:.12em"><span>‹ BACK</span><span style="flex:1;height:1px;background:#111"></span><span>NEXT ›</span></div>
+    <div style="display:flex;justify-content:space-between;margin:10px 60px 0;font-size:13px;font-weight:700;letter-spacing:.1em;color:#B0A896"><span>01</span><span style="color:#E23B26">02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span></div>
+  </div>
+</section>
+
+<section data-document-role="page" data-label="04 Story 03" data-screen-label="04" style="position:relative;width:1080px;height:1080px;flex:none;overflow:hidden;background:radial-gradient(100% 72% at 86% 4%,rgba(226,59,38,.40) 0%,rgba(226,59,38,0) 62%),radial-gradient(85% 62% at 8% 104%,rgba(255,150,60,.16) 0%,rgba(255,150,60,0) 62%),linear-gradient(166deg,#241E18 0%,#131110 54%,#070706 100%);color:#F2EFE9">
+  <div style="position:absolute;top:30px;left:0;right:0;display:flex;justify-content:center;gap:9px"><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span><span style="width:7px;height:7px;border-radius:50%;background:#F2EFE9"></span><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span></div>
+  <div style="position:absolute;top:56px;left:56px;right:56px;display:flex;justify-content:space-between;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase"><span>{{ issueLabel }}</span><span>{{ handle }}</span><span>Story 03</span></div>
+  <div style="position:absolute;top:150px;left:56px;right:56px">
+    <div style="display:flex;align-items:baseline;gap:18px">
+      <span style="font-size:120px;font-weight:900;line-height:.8;letter-spacing:-.05em;color:#E23B26">03</span>
+      <span style="font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:8px 14px;border:1.5px solid #F2EFE9;border-radius:999px">{{ c3 }}</span>
+    </div>
+    <div style="font-family:Yellowtail,cursive;font-size:56px;line-height:.9;margin-top:12px;transform:rotate(-2deg);color:#E23B26">the story</div>
+    <div style="font-size:82px;font-weight:900;line-height:.92;letter-spacing:-.04em;margin-top:2px;text-wrap:balance">{{ h3 }}</div>
+    <div style="font-size:25px;font-weight:400;line-height:1.35;margin-top:20px;max-width:880px;color:#CFC9BC;text-wrap:pretty">{{ s3 }}</div>
+  </div>
+  <div style="position:absolute;left:0;right:0;bottom:0;height:360px;background-image:linear-gradient(180deg,rgba(7,7,6,0) 40%,rgba(7,7,6,.55) 100%),url({{ img3 }}),linear-gradient(138deg,#332B20 0%,#1E1A14 58%,#131010 100%);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:#6E6759;font-size:13px;font-weight:700;letter-spacing:.22em">{{ imgLabel3 }}</div>
+  <div style="position:absolute;left:56px;right:56px;bottom:112px;font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8E8779">{{ src3 }}</div>
+  <div style="position:absolute;left:56px;right:56px;bottom:44px">
+    <div style="display:flex;align-items:center;gap:16px;font-size:15px;font-weight:800;letter-spacing:.12em"><span>‹ BACK</span><span style="flex:1;height:1px;background:#F2EFE9"></span><span>NEXT ›</span></div>
+    <div style="display:flex;justify-content:space-between;margin:10px 60px 0;font-size:13px;font-weight:700;letter-spacing:.1em;color:#6E6759"><span>01</span><span>02</span><span style="color:#E23B26">03</span><span>04</span><span>05</span><span>06</span><span>07</span></div>
+  </div>
+</section>
+
+<section data-document-role="page" data-label="05 Story 04" data-screen-label="05" style="position:relative;width:1080px;height:1080px;flex:none;overflow:hidden;background:radial-gradient(95% 64% at 98% 102%,rgba(226,59,38,.22) 0%,rgba(226,59,38,0) 62%),radial-gradient(62% 46% at -2% -2%,rgba(255,209,150,.48) 0%,rgba(255,209,150,0) 64%),linear-gradient(162deg,#FFFCF6 0%,#F3EFE8 48%,#E8DFCD 100%);color:#111">
+  <div style="position:absolute;top:30px;left:0;right:0;display:flex;justify-content:center;gap:9px"><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#111"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span></div>
+  <div style="position:absolute;top:56px;left:56px;right:56px;display:flex;justify-content:space-between;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase"><span>{{ issueLabel }}</span><span>{{ handle }}</span><span>Story 04</span></div>
+  <div style="position:absolute;left:0;top:132px;bottom:180px;width:470px;background-image:linear-gradient(180deg,rgba(20,18,14,0) 45%,rgba(20,18,14,.28) 100%),url({{ img4 }}),linear-gradient(138deg,#F0EADC 0%,#DBD4C3 52%,#C6BEAA 100%);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:#9A9384;font-size:13px;font-weight:700;letter-spacing:.22em">{{ imgLabel4 }}</div>
+  <div style="position:absolute;top:150px;left:530px;right:56px">
+    <span style="font-size:120px;font-weight:900;line-height:.8;letter-spacing:-.05em;color:#E23B26">04</span>
+    <div style="font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-top:20px">{{ c4 }}</div>
+    <div style="font-size:64px;font-weight:900;line-height:.95;letter-spacing:-.04em;margin-top:14px;text-wrap:balance">{{ h4 }}</div>
+    <div style="font-size:23px;font-weight:400;line-height:1.35;margin-top:18px;text-wrap:pretty">{{ s4 }}</div>
+    <div style="font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#6E6759;margin-top:24px">{{ src4 }}</div>
+  </div>
+  <div style="position:absolute;left:56px;right:56px;bottom:44px">
+    <div style="display:flex;align-items:center;gap:16px;font-size:15px;font-weight:800;letter-spacing:.12em"><span>‹ BACK</span><span style="flex:1;height:1px;background:#111"></span><span>NEXT ›</span></div>
+    <div style="display:flex;justify-content:space-between;margin:10px 60px 0;font-size:13px;font-weight:700;letter-spacing:.1em;color:#B0A896"><span>01</span><span>02</span><span>03</span><span style="color:#E23B26">04</span><span>05</span><span>06</span><span>07</span></div>
+  </div>
+</section>
+
+<section data-document-role="page" data-label="06 Story 05" data-screen-label="06" style="position:relative;width:1080px;height:1080px;flex:none;overflow:hidden;background:radial-gradient(95% 64% at 2% 102%,rgba(226,59,38,.22) 0%,rgba(226,59,38,0) 62%),radial-gradient(62% 46% at 102% -2%,rgba(255,209,150,.48) 0%,rgba(255,209,150,0) 64%),linear-gradient(196deg,#FFFCF6 0%,#F3EFE8 48%,#E8DFCD 100%);color:#111">
+  <div style="position:absolute;top:30px;left:0;right:0;display:flex;justify-content:center;gap:9px"><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#111"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span></div>
+  <div style="position:absolute;top:56px;left:56px;right:56px;display:flex;justify-content:space-between;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase"><span>{{ issueLabel }}</span><span>{{ handle }}</span><span>Story 05</span></div>
+  <div style="position:absolute;top:132px;left:56px;right:56px">
+    <div style="display:flex;align-items:baseline;gap:18px">
+      <span style="font-size:120px;font-weight:900;line-height:.8;letter-spacing:-.05em;color:#E23B26">05</span>
+      <span style="font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:8px 14px;border:1.5px solid #111;border-radius:999px">{{ c5 }}</span>
+    </div>
+    <div style="font-family:Yellowtail,cursive;font-size:56px;line-height:.9;margin-top:12px;transform:rotate(-2deg)">the story</div>
+    <div style="font-size:82px;font-weight:900;line-height:.92;letter-spacing:-.04em;margin-top:2px;text-wrap:balance">{{ h5 }}</div>
+    <div style="font-size:25px;font-weight:400;line-height:1.35;margin-top:20px;max-width:880px;text-wrap:pretty">{{ s5 }}</div>
+  </div>
+  <div style="position:absolute;left:0;right:0;bottom:0;height:400px;background-image:linear-gradient(180deg,rgba(20,18,14,0) 45%,rgba(20,18,14,.28) 100%),url({{ img5 }}),linear-gradient(138deg,#F0EADC 0%,#DBD4C3 52%,#C6BEAA 100%);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:#9A9384;font-size:13px;font-weight:700;letter-spacing:.22em">{{ imgLabel5 }}</div>
+  <div style="position:absolute;left:56px;right:56px;bottom:112px;font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#6E6759">{{ src5 }}</div>
+  <div style="position:absolute;left:56px;right:56px;bottom:44px">
+    <div style="display:flex;align-items:center;gap:16px;font-size:15px;font-weight:800;letter-spacing:.12em"><span>‹ BACK</span><span style="flex:1;height:1px;background:#111"></span><span>NEXT ›</span></div>
+    <div style="display:flex;justify-content:space-between;margin:10px 60px 0;font-size:13px;font-weight:700;letter-spacing:.1em;color:#B0A896"><span>01</span><span>02</span><span>03</span><span>04</span><span style="color:#E23B26">05</span><span>06</span><span>07</span></div>
+  </div>
+</section>
+
+<section data-document-role="page" data-label="07 Story 06" data-screen-label="07" style="position:relative;width:1080px;height:1080px;flex:none;overflow:hidden;background:radial-gradient(95% 64% at 98% 102%,rgba(226,59,38,.22) 0%,rgba(226,59,38,0) 62%),radial-gradient(62% 46% at -2% -2%,rgba(255,209,150,.48) 0%,rgba(255,209,150,0) 64%),linear-gradient(162deg,#FFFCF6 0%,#F3EFE8 48%,#E8DFCD 100%);color:#111">
+  <div style="position:absolute;top:30px;left:0;right:0;display:flex;justify-content:center;gap:9px;z-index:2"><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#111"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span><span style="width:7px;height:7px;border-radius:50%;background:#C8C2B5"></span></div>
+  <div style="position:absolute;left:0;right:0;top:0;height:430px;background-image:linear-gradient(180deg,rgba(20,18,14,0) 45%,rgba(20,18,14,.28) 100%),url({{ img6 }}),linear-gradient(138deg,#F0EADC 0%,#DBD4C3 52%,#C6BEAA 100%);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:#9A9384;font-size:13px;font-weight:700;letter-spacing:.22em">{{ imgLabel6 }}</div>
+  <div style="position:absolute;top:56px;left:56px;right:56px;display:flex;justify-content:space-between;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;z-index:2"><span>{{ issueLabel }}</span><span>{{ handle }}</span><span>Story 06</span></div>
+  <div style="position:absolute;top:492px;left:56px;right:56px">
+    <div style="display:flex;align-items:baseline;gap:18px">
+      <span style="font-size:120px;font-weight:900;line-height:.8;letter-spacing:-.05em;color:#E23B26">06</span>
+      <span style="font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:8px 14px;border:1.5px solid #111;border-radius:999px">{{ c6 }}</span>
+    </div>
+    <div style="font-size:82px;font-weight:900;line-height:.92;letter-spacing:-.04em;margin-top:22px;text-wrap:balance">{{ h6 }}</div>
+    <div style="font-size:25px;font-weight:400;line-height:1.35;margin-top:20px;max-width:880px;text-wrap:pretty">{{ s6 }}</div>
+  </div>
+  <div style="position:absolute;left:56px;right:56px;bottom:112px;font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#6E6759">{{ src6 }}</div>
+  <div style="position:absolute;left:56px;right:56px;bottom:44px">
+    <div style="display:flex;align-items:center;gap:16px;font-size:15px;font-weight:800;letter-spacing:.12em"><span>‹ BACK</span><span style="flex:1;height:1px;background:#111"></span><span>NEXT ›</span></div>
+    <div style="display:flex;justify-content:space-between;margin:10px 60px 0;font-size:13px;font-weight:700;letter-spacing:.1em;color:#B0A896"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span style="color:#E23B26">06</span><span>07</span></div>
+  </div>
+</section>
+
+<section data-document-role="page" data-label="08 Story 07" data-screen-label="08" style="position:relative;width:1080px;height:1080px;flex:none;overflow:hidden;background:radial-gradient(100% 72% at 86% 4%,rgba(226,59,38,.40) 0%,rgba(226,59,38,0) 62%),radial-gradient(85% 62% at 8% 104%,rgba(255,150,60,.16) 0%,rgba(255,150,60,0) 62%),linear-gradient(166deg,#241E18 0%,#131110 54%,#070706 100%);color:#F2EFE9">
+  <div style="position:absolute;top:30px;left:0;right:0;display:flex;justify-content:center;gap:9px"><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span><span style="width:7px;height:7px;border-radius:50%;background:#F2EFE9"></span><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span><span style="width:7px;height:7px;border-radius:50%;background:#4A463E"></span></div>
+  <div style="position:absolute;top:56px;left:56px;right:56px;display:flex;justify-content:space-between;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase"><span>{{ issueLabel }}</span><span>{{ handle }}</span><span>Story 07</span></div>
+  <div style="position:absolute;top:150px;left:56px;right:56px">
+    <div style="display:flex;align-items:baseline;gap:18px">
+      <span style="font-size:120px;font-weight:900;line-height:.8;letter-spacing:-.05em;color:#E23B26">07</span>
+      <span style="font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:8px 14px;border:1.5px solid #F2EFE9;border-radius:999px">{{ c7 }}</span>
+    </div>
+    <div style="font-family:Yellowtail,cursive;font-size:56px;line-height:.9;margin-top:12px;transform:rotate(-2deg);color:#E23B26">the story</div>
+    <div style="font-size:82px;font-weight:900;line-height:.92;letter-spacing:-.04em;margin-top:2px;text-wrap:balance">{{ h7 }}</div>
+    <div style="font-size:25px;font-weight:400;line-height:1.35;margin-top:20px;max-width:880px;color:#CFC9BC;text-wrap:pretty">{{ s7 }}</div>
+  </div>
+  <div style="position:absolute;left:0;right:0;bottom:0;height:360px;background-image:linear-gradient(180deg,rgba(7,7,6,0) 40%,rgba(7,7,6,.55) 100%),url({{ img7 }}),linear-gradient(138deg,#332B20 0%,#1E1A14 58%,#131010 100%);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;color:#6E6759;font-size:13px;font-weight:700;letter-spacing:.22em">{{ imgLabel7 }}</div>
+  <div style="position:absolute;left:56px;right:56px;bottom:112px;font-size:14px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8E8779">{{ src7 }}</div>
+  <div style="position:absolute;left:56px;right:56px;bottom:44px">
+    <div style="display:flex;align-items:center;gap:16px;font-size:15px;font-weight:800;letter-spacing:.12em"><span>‹ BACK</span><span style="flex:1;height:1px;background:#F2EFE9"></span><span>NEXT ›</span></div>
+    <div style="display:flex;justify-content:space-between;margin:10px 60px 0;font-size:13px;font-weight:700;letter-spacing:.1em;color:#6E6759"><span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span style="color:#E23B26">07</span></div>
+  </div>
+</section>
+
+<section data-document-role="page" data-label="09 Outro" data-screen-label="09" style="position:relative;width:1080px;height:1080px;flex:none;overflow:hidden;background:radial-gradient(85% 62% at 18% -4%,rgba(255,158,96,.58) 0%,rgba(255,158,96,0) 62%),linear-gradient(152deg,#F4552F 0%,#E23B26 45%,#AF210E 100%);color:#F7F4EE">
+  <div style="position:absolute;top:30px;left:0;right:0;display:flex;justify-content:center;gap:9px"><span style="width:7px;height:7px;border-radius:50%;background:#F0A79C"></span><span style="width:7px;height:7px;border-radius:50%;background:#F0A79C"></span><span style="width:7px;height:7px;border-radius:50%;background:#F0A79C"></span><span style="width:7px;height:7px;border-radius:50%;background:#F0A79C"></span><span style="width:7px;height:7px;border-radius:50%;background:#F0A79C"></span><span style="width:7px;height:7px;border-radius:50%;background:#F0A79C"></span><span style="width:7px;height:7px;border-radius:50%;background:#F0A79C"></span><span style="width:7px;height:7px;border-radius:50%;background:#F0A79C"></span><span style="width:7px;height:7px;border-radius:50%;background:#FFFFFF"></span></div>
+  <div style="position:absolute;top:56px;left:56px;right:56px;display:flex;justify-content:space-between;font-size:15px;font-weight:600;letter-spacing:.18em;text-transform:uppercase"><span>{{ issueLabel }}</span><span>{{ handle }}</span><span>The Wrap</span></div>
+
+  <div style="position:absolute;top:180px;left:56px;right:56px">
+    <div style="font-family:Yellowtail,cursive;font-size:92px;line-height:.9;transform:rotate(-2deg)">that's a wrap</div>
+    <div style="font-size:108px;font-weight:900;line-height:.86;letter-spacing:-.05em;margin-top:14px">SEVEN STORIES.<br>ONE WEEK.</div>
+    <div style="font-size:28px;font-weight:500;line-height:1.35;margin-top:26px;max-width:820px;text-wrap:pretty">Every story here was checked against its original source. Nothing added, nothing spun.</div>
+  </div>
+
+  <div style="position:absolute;left:56px;right:56px;bottom:250px;height:1px;background:rgba(247,244,238,.45)"></div>
+  <div style="position:absolute;left:56px;right:56px;bottom:130px;display:flex;align-items:flex-end;justify-content:space-between;gap:32px">
+    <div>
+      <div style="font-size:15px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;opacity:.85">Next edition</div>
+      <div style="font-size:34px;font-weight:800;line-height:1.1;margin-top:10px;letter-spacing:-.02em">Follow {{ handle }} for next week's seven.</div>
+    </div>
+    <div style="display:flex;gap:14px;flex:none">
+      <div style="font-size:15px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:16px 26px;border:2px solid #F7F4EE;border-radius:999px">Save</div>
+      <div style="font-size:15px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:16px 26px;border:2px solid #F7F4EE;border-radius:999px;background:#F7F4EE;color:#E23B26">Share</div>
+    </div>
+  </div>
+  <div style="position:absolute;left:56px;right:56px;bottom:44px">
+    <div style="display:flex;align-items:center;gap:16px;font-size:15px;font-weight:800;letter-spacing:.12em"><span>‹ BACK</span><span style="flex:1;height:1px;background:#F7F4EE"></span><span>END</span></div>
+  </div>
+</section>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;newsJson&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Daily data&quot;},&quot;handle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;@YOURHANDLE&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;issueLabel&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;AUG ©2026&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const words = ["one","two","three","four","five","six","seven"];
+    let stories = [];
+    try {
+      const src = this.props.newsJson || (typeof window !== "undefined" && window.__NEWS_JSON) || "";
+      const parsed = JSON.parse((typeof src === "string" ? src : JSON.stringify(src)).trim() || "[]");
+      if (Array.isArray(parsed)) stories = parsed;
+    } catch (e) { /* keep placeholders while the JSON is mid-edit */ }
+    const out = {
+      handle: this.props.handle ?? "@YOURHANDLE",
+      issueLabel: this.props.issueLabel ?? "AUG ©2026",
+    };
+    for (let i = 0; i < 7; i++) {
+      const s = stories[i] || {};
+      out["h" + (i + 1)] = s.headline || ("Headline " + words[i] + " goes right here");
+      out["s" + (i + 1)] = s.summary || "One or two sentences of context. What happened, where, and why it matters this week. Keep it to about thirty words.";
+      out["c" + (i + 1)] = s.category || "Category";
+      out["src" + (i + 1)] = s.source || "Source · Publication name";
+      const img = s._image || s.image || "";
+      out["img" + (i + 1)] = img || "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+      out["imgLabel" + (i + 1)] = img ? "" : "STORY IMAGE — DROP HERE";
+    }
+    return out;
+  }
+}
+
+</script>
+</body>
+</html>
