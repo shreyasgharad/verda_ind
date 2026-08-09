@@ -41,8 +41,9 @@ articles to lead the edition. `spread()` guarantees no single newsroom fills the
 
 Requires: Instagram Business account, linked Facebook Page, a long-lived access token.
 Carousel posting is 3 API calls — one per image (as `IMAGE` children), one to create the
-carousel container, one to publish. Images must be at public HTTPS URLs, so the workflow needs
-to upload the PNGs somewhere first (GitHub Pages on the same repo works and is free).
+carousel container, one to publish. Images must be at public HTTPS URLs — the workflow now
+does this itself: it deploys the rendered PNGs to GitHub Pages first, then hands
+`post-instagram.js` the live Pages URL as `IMAGE_BASE`. Nothing to wire up manually.
 
 ## Failure modes worth knowing
 

@@ -11,22 +11,24 @@ Times are one-off unless marked daily. Total setup: about an hour.
    Instagram will not allow API posting without this. There is no way around it.
 3. Note the Instagram handle — you'll need the numeric id in step 3.
 
-## 2 · GitHub repo (10 min)
+## 2 · GitHub repo (10 min) — already done for `verda_ind`
 
-1. Create a free GitHub account.
-2. New repository, **public** (Actions minutes are free on public repos).
-3. Upload these files, keeping the folder structure:
+All of this is already in place in this repo, `package.json` included, so nothing to upload.
+Listed here for reference / if you ever fork this to a new repo:
 
    ```
    carousel-standalone.html
    news-fetch-rss.js
    render-slides.js
    post-instagram.js
+   package.json
    .github/workflows/daily-carousel.yml
    ```
 
-4. Repo → Settings → Pages → Source: **GitHub Actions**.
-5. Repo → Settings → Actions → General → Workflow permissions: **Read and write**.
+Two settings you still need to flip by hand on **this** repo (not scriptable via API):
+
+1. Repo → Settings → Pages → Source: **GitHub Actions**.
+2. Repo → Settings → Actions → General → Workflow permissions: **Read and write**.
 
 ## 3 · Meta access token (20 min)
 
